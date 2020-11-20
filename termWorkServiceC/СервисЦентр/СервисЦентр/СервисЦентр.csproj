@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49B7E9E6-F927-4EEA-89B3-042605940DB6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>СервисЦентр</RootNamespace>
+    <AssemblyName>СервисЦентр</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="СервисЦентрDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>СервисЦентрDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Вход.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Вход.Designer.cs">
+      <DependentUpon>Вход.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ГлавныйВход.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ГлавныйВход.Designer.cs">
+      <DependentUpon>ГлавныйВход.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Отдел_кадров.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Отдел_кадров.Designer.cs">
+      <DependentUpon>Отдел_кадров.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="СервисЦентрDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>СервисЦентрDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="СервисЦентрDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>СервисЦентрDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Список_заказов.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Список_заказов.Designer.cs">
+      <DependentUpon>Список_заказов.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Список_неиспроавностей.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Список_неиспроавностей.Designer.cs">
+      <DependentUpon>Список_неиспроавностей.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Вход.resx">
+      <DependentUpon>Вход.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ГлавныйВход.resx">
+      <DependentUpon>ГлавныйВход.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Отдел_кадров.resx">
+      <DependentUpon>Отдел_кадров.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Список_заказов.resx">
+      <DependentUpon>Список_заказов.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Список_неиспроавностей.resx">
+      <DependentUpon>Список_неиспроавностей.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="СервисЦентрDataSet.xsc">
+      <DependentUpon>СервисЦентрDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="СервисЦентрDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>СервисЦентрDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="СервисЦентрDataSet.xss">
+      <DependentUpon>СервисЦентрDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="СервисЦентрDataSet1.xsc">
+      <DependentUpon>СервисЦентрDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="СервисЦентрDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>СервисЦентрDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="СервисЦентрDataSet1.xss">
+      <DependentUpon>СервисЦентрDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="СервисЦентрDataSet2.xsc">
+      <DependentUpon>СервисЦентрDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="СервисЦентрDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>СервисЦентрDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="СервисЦентрDataSet2.xss">
+      <DependentUpon>СервисЦентрDataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\afcfce701cdb4e449aa8e14ae5bbc0d3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безымянный.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_1629.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_1630.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
